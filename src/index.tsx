@@ -2,9 +2,9 @@ import { Hono } from 'hono'
 
 const app = new Hono()
 
-// Redirect root to index.html (wrangler pages serves public/* automatically)
-app.get('/', (c) => {
-  return c.redirect('/index.html', 302)
+// Biarkan kosong untuk rute '/' agar Cloudflare Pages otomatis membaca file public/index.html Anda
+app.get('/api/health', (c) => {
+  return c.text('Server is running!')
 })
 
 export default app
