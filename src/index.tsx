@@ -1,12 +1,10 @@
 import { Hono } from 'hono'
-import { renderer } from './renderer'
 
 const app = new Hono()
 
-app.use(renderer)
-
+// Redirect root to index.html (wrangler pages serves public/* automatically)
 app.get('/', (c) => {
-  return c.render(<h1>Hello!</h1>)
+  return c.redirect('/index.html', 302)
 })
 
 export default app
