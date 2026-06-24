@@ -6,9 +6,8 @@
   <title>Ads Units</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { background: transparent; font-family: sans-serif; }
+    body { background: transparent; font-family: sans-serif; overflow: hidden; }
 
-    /* ─── Shared wrapper ─── */
     .ad-block {
       display: flex;
       justify-content: center;
@@ -16,7 +15,7 @@
       gap: 8px;
       flex-wrap: wrap;
       width: 100%;
-      padding: 4px 0;
+      padding: 2px 0;
     }
     .ad-unit {
       overflow: hidden;
@@ -25,118 +24,81 @@
       background: #111;
     }
 
-    /* ─── Position A  320×50 ─── */
+    /* Ukuran Kotak Iklan */
     .ad-unit-a { width: 320px; height: 50px; }
-
-    /* ─── Position B  300×250 ─── */
     .ad-unit-b { width: 300px; height: 250px; }
-
-    /* ─── Position C  160×300 ─── */
     .ad-unit-c { width: 160px; height: 300px; }
   </style>
 </head>
 <body>
 
-  <!-- ════════════════════════════════════
-       POSITION A – TOP  (2 × 320×50)
-  ════════════════════════════════════ -->
-  <div id="pos-a" class="ad-block" data-position="A">
-
+  <div id="pos-a" class="ad-block">
     <div class="ad-unit ad-unit-a">
       <script>
-        atOptions = {
-          'key'    : '113942e911746c421f6b5497bf65a2c6',
-          'format' : 'iframe',
-          'height' : 50,
-          'width'  : 320,
-          'params' : {}
-        };
+         atOptions = { 'key' : '113942e911746c421f6b5497bf65a2c6', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
       </script>
       <script src="https://buffcasualwhine.com/113942e911746c421f6b5497bf65a2c6/invoke.js"></script>
     </div>
-
     <div class="ad-unit ad-unit-a">
       <script>
-        atOptions = {
-          'key'    : '113942e911746c421f6b5497bf65a2c6',
-          'format' : 'iframe',
-          'height' : 50,
-          'width'  : 320,
-          'params' : {}
-        };
+         atOptions = { 'key' : '113942e911746c421f6b5497bf65a2c6', 'format' : 'iframe', 'height' : 50, 'width' : 320, 'params' : {} };
       </script>
       <script src="https://buffcasualwhine.com/113942e911746c421f6b5497bf65a2c6/invoke.js"></script>
     </div>
+  </div>
 
-  </div><!-- /#pos-a -->
-
-
-  <!-- ════════════════════════════════════
-       POSITION B – BELOW PLAYER  (2 × 300×250)
-  ════════════════════════════════════ -->
-  <div id="pos-b" class="ad-block" data-position="B">
-
+  <div id="pos-b" class="ad-block">
     <div class="ad-unit ad-unit-b">
       <script>
-        atOptions = {
-          'key'    : '53541ca00eed825e8c431c12f7418ac0',
-          'format' : 'iframe',
-          'height' : 250,
-          'width'  : 300,
-          'params' : {}
-        };
+         atOptions = { 'key' : '53541ca00eed825e8c431c12f7418ac0', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
       </script>
       <script src="https://buffcasualwhine.com/53541ca00eed825e8c431c12f7418ac0/invoke.js"></script>
     </div>
-
     <div class="ad-unit ad-unit-b">
       <script>
-        atOptions = {
-          'key'    : '53541ca00eed825e8c431c12f7418ac0',
-          'format' : 'iframe',
-          'height' : 250,
-          'width'  : 300,
-          'params' : {}
-        };
+         atOptions = { 'key' : '53541ca00eed825e8c431c12f7418ac0', 'format' : 'iframe', 'height' : 250, 'width' : 300, 'params' : {} };
       </script>
       <script src="https://buffcasualwhine.com/53541ca00eed825e8c431c12f7418ac0/invoke.js"></script>
     </div>
+  </div>
 
-  </div><!-- /#pos-b -->
-
-
-  <!-- ════════════════════════════════════
-       POSITION C – BOTTOM  (2 × 160×300)
-  ════════════════════════════════════ -->
-  <div id="pos-c" class="ad-block" data-position="C">
-
+  <div id="pos-c" class="ad-block">
     <div class="ad-unit ad-unit-c">
       <script>
-        atOptions = {
-          'key'    : '328472b6f3804a37481a66024bd30649',
-          'format' : 'iframe',
-          'height' : 300,
-          'width'  : 160,
-          'params' : {}
-        };
+         atOptions = { 'key' : '328472b6f3804a37481a66024bd30649', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
       </script>
       <script src="https://buffcasualwhine.com/328472b6f3804a37481a66024bd30649/invoke.js"></script>
     </div>
-
     <div class="ad-unit ad-unit-c">
       <script>
-        atOptions = {
-          'key'    : '328472b6f3804a37481a66024bd30649',
-          'format' : 'iframe',
-          'height' : 300,
-          'width'  : 160,
-          'params' : {}
-        };
+         atOptions = { 'key' : '328472b6f3804a37481a66024bd30649', 'format' : 'iframe', 'height' : 300, 'width' : 160, 'params' : {} };
       </script>
       <script src="https://buffcasualwhine.com/328472b6f3804a37481a66024bd30649/invoke.js"></script>
     </div>
+  </div>
 
-  </div><!-- /#pos-c -->
+  <script>
+    function filterAds() {
+      // Ambil ID dari tanda pagar URL (misal: #pos-a)
+      var hash = window.location.hash; 
+      if (!hash) return;
+
+      // Cari elemen yang dituju
+      var targetEl = document.querySelector(hash);
+
+      if (targetEl) {
+        // HAPUS semua posisi iklan lain dari dokumen agar tidak merusak layout
+        var allBlocks = document.querySelectorAll('.ad-block');
+        allBlocks.forEach(function(block) {
+          if ('#' + block.id !== hash) {
+            block.remove(); // Hapus total posisi iklan lain dari RAM browser
+          }
+        });
+      }
+    }
+    // Jalankan fungsi saat halaman dimuat
+    window.addEventListener('DOMContentLoaded', filterAds);
+  </script>
 
 </body>
 </html>
