@@ -28,6 +28,8 @@
     .ad-unit-a { width: 320px; height: 50px; }
     .ad-unit-b { width: 300px; height: 250px; }
     .ad-unit-c { width: 160px; height: 300px; }
+    /* Tambahan Kelas untuk Banner 728x90 */
+    .ad-unit-d { width: 728px; height: 90px; }
   </style>
 </head>
 <body>
@@ -77,9 +79,36 @@
     </div>
   </div>
 
+  <div id="pos-d" class="ad-block">
+    <div class="ad-unit ad-unit-d">
+      <script>
+        atOptions = {
+          'key' : '2d751854ce36e13fefddaa58f93251e2',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      </script>
+      <script src="https://buffcasualwhine.com/2d751854ce36e13fefddaa58f93251e2/invoke.js"></script>
+    </div>
+    <div class="ad-unit ad-unit-d">
+      <script>
+        atOptions = {
+          'key' : '2d751854ce36e13fefddaa58f93251e2',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      </script>
+      <script src="https://buffcasualwhine.com/2d751854ce36e13fefddaa58f93251e2/invoke.js"></script>
+    </div>
+  </div>
+
   <script>
     function filterAds() {
-      // Ambil ID dari tanda pagar URL (misal: #pos-a)
+      // Ambil ID dari tanda pagar URL (misal: #pos-d)
       var hash = window.location.hash; 
       if (!hash) return;
 
